@@ -1,2 +1,2 @@
-# turbo-happiness-weather
+# weathering-with-me
 Exercise in progressive web app design
