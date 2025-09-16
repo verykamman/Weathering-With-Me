@@ -1,0 +1,18 @@
+{
+    "lang": "zh-HK",
+    "name": "香港天氣預報",
+    "short_name": "天氣預報",
+    "description": "一個顯示香港天氣預報的進階網頁應用程式，提供九天預報、海洋及土壤溫度。",
+    "start_url": "/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

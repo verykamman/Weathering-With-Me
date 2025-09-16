@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港天氣預報</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/weather.css">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="weather-app">
+        <h1>香港天氣預報</h1>
+        <div id="general-situation"></div>
+        <h2>未來九天天氣預報</h2>
+        <div id="forecast-container"></div>
+        <h2>海洋溫度</h2>
+        <div id="sea-temp"></div>
+        <h2>土壤溫度</h2>
+        <div id="soil-temp"></div>
+        <p id="update-time"></p>
+    </div>
+    <script src="/weather.js"></script>
+</body>
+</html>
