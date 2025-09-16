@@ -13,6 +13,19 @@ async function fetchWeatherData() {
 }
 
 function displayWeatherData(data) {
+    // Get current time in Hong Kong
+    const hkTime = new Date().toLocaleString('zh-HK', {
+        timeZone: 'Asia/Hong_Kong',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+    document.getElementById('current-time').innerHTML = `<h1>Current time: ${hkTime}</h1>`;
+    
     // General Situation
     document.getElementById('general-situation').innerHTML = `<p>${data.generalSituation}</p>`;
 
