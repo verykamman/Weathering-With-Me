@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "Weathering-With-Me",
+    "short_name": "Weather",
+    "description": "A basic PWA based client for weather services.",
+    "start_url": "/",
+    "background_color": "black",
+    "theme_color": "gray",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "",
+            "sizes": "512x512"
+        }
+    ]
+}
