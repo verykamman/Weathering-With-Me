@@ -1,24 +1,87 @@
 /* styles for index page */
 
 /*Globals*/
+:root {
+    color-scheme: light dark;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    /* font-family: system-ui; */
+
     text-align: center;
+
+    /* dark mode support */
+    background-color: light-dark(rgb(250, 250, 250), #242424);
+    color: light-dark(black, white);
 }
 
+/* Navbar */
 
-/* light mode */
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: white;
-        color: black;
-    }
+/* Navbutton */
+.nav_button {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 10;
+    top: 1%;
+    left: 0.5%;
+    overflow-x: hidden;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: gray;
 }
 
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #242424;
-        color: white;
-    }
+.nav_bar1, .nav_bar2, .nav_bar3 {
+    width: 20px;
+    height: 2px;
+    margin: 4px 0;
+    transition: 0.2s;
+    background-color: light-dark(black, white);
+}
+
+/* Rotate first bar */
+.change .nav_bar1 {
+  transform: translate(0, 6px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .nav_bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .nav_bar3 {
+  transform: translate(0, -6px) rotate(45deg);
+}
+
+/* Navpanel */
+
+.nav_panel {
+    height: 200px;
+    width: 0;
+    text-align: left;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: light-dark(gray, #505050);
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 60px;
+    transition: 0.5s;
+    border-radius: 5%;
+}
+
+.nav_panel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: light-dark(black, white);
+    display: block;
+    transition: 0.3s;
+}
+
+.nav_panela:hover{
+    color: light-dark(#414141, #707070);
 }

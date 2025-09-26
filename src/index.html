@@ -1,3 +1,4 @@
+<!-- TODO Find out how to make a toggle button -->
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
   <head>
@@ -7,8 +8,67 @@
     <link rel="stylesheet" href="indx_style.css">
     <link rel="manifest" href="/manifest.json">
   </head>
+
+
   <body>
+    <!-- navbar part -->
+    <div class="nav_button" onclick="toggle_nav(this)">
+      <div class="nav_bar1"></div>
+      <div class="nav_bar2"></div>
+      <div class="nav_bar3"></div>
+    </div>
+
+    <div id="panel" class="nav_panel">    
+      <a href="#">About</a>
+      <a href="#">Weather</a>
+      <a href="#">Today's Data</a>
+      <a href="#">Earthquake</a>
+    </div>
+
+    <script>
+      var nav_toggle = true;
+      function toggle_nav(x) {
+        // to enable menu button animations
+        x.classList.toggle("change");
+        if (nav_toggle){
+          document.getElementById("panel").style.width = "250px";
+          nav_toggle = false;
+        }
+        else {
+          document.getElementById("panel").style.width = "0";
+          nav_toggle = true;
+        }
+      } 
+    </script>
     <h1>TEST</h1>
+    <hr>
     <p>App to access HKO weather info.</p>
+    <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at orci vestibulum, rutrum nisl eget, facilisis magna. Aenean at ultricies orci. Integer aliquet est posuere eros varius, sit amet bibendum ligula consequat. Vestibulum nec efficitur nisi. Etiam lobortis dui ipsum, non pretium orci ornare et. Sed ac venenatis mauris, imperdiet posuere turpis. Nullam turpis tortor, venenatis vel ipsum id, auctor vulputate nulla.
+
+Etiam sit amet nisi a tortor ultricies posuere et ullamcorper urna. Quisque condimentum interdum lectus eget ultricies. Fusce congue id augue non pharetra. Sed ex neque, aliquet non neque sed, tristique tempus massa. Nam ac elit sapien. Nullam eu felis eu est bibendum volutpat. Sed accumsan neque elit, non elementum sapien maximus ac. Nunc volutpat tortor at quam dignissim porttitor. Integer vestibulum varius dolor, vestibulum molestie sem fringilla a. Cras a luctus nibh. Duis tempus tortor erat, at vestibulum tellus venenatis ac. Nulla facilisi. In hac habitasse platea dictumst.
+
+Ut tempus vehicula nibh, ut hendrerit nisi venenatis sit amet. Nunc vel justo cursus, iaculis dui non, gravida sapien. Nam dictum eu ligula id ullamcorper. Sed vel sollicitudin lorem. Ut porttitor ipsum fermentum ipsum aliquet, sit amet fringilla mauris facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et elit bibendum, tempus ipsum at, vestibulum metus. Donec vitae urna lobortis dolor iaculis malesuada eu eget nunc. Vivamus a ultricies sem, id sodales mi.
+
+Aliquam consequat, lorem sed efficitur venenatis, nisl elit rhoncus purus, at pharetra ante neque et ipsum. Nam purus purus, pulvinar non ornare at, lobortis nec felis. Sed vehicula dolor at porttitor gravida. Nunc faucibus aliquam ipsum. Ut scelerisque pharetra velit vitae tempus. Pellentesque semper nulla mollis mi luctus semper. Praesent vel posuere lectus. Quisque non odio eu massa auctor sagittis nec sit amet arcu. Duis faucibus, urna nec faucibus rutrum, metus massa lobortis ex, at porttitor felis sapien at nisl.
+
+Suspendisse potenti. Aliquam erat volutpat. Donec volutpat eget ipsum et facilisis. Praesent vitae mi ac metus laoreet efficitur. Nam viverra urna eu tortor euismod mollis vel ut orci. Integer ut nisl et mauris tempor faucibus ut eu tortor. Duis pharetra lorem laoreet dapibus faucibus. Pellentesque eget pulvinar metus. Aliquam volutpat at dui et consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In nec tincidunt augue. Maecenas sem magna, malesuada ut tincidunt vel, sodales ut tellus.
+
+Cras dictum lectus ut eros fringilla dignissim. Duis efficitur ante eu ante vehicula, sed varius nulla sodales. Maecenas vel efficitur massa, ut tempus turpis. Nullam sit amet malesuada risus. In porta felis enim, nec vulputate magna rhoncus id. Integer sollicitudin ultricies lobortis. Suspendisse dictum, nisl ut feugiat condimentum, tortor ante varius ex, et congue tortor augue et magna. In maximus risus eu est euismod mattis. Quisque cursus iaculis imperdiet. Etiam quis ligula fringilla, bibendum quam quis, finibus nunc.
+
+In hac habitasse platea dictumst. Sed magna lacus, maximus in odio et, fringilla efficitur diam. Integer arcu eros, pharetra vitae tempor at, porta at elit. Mauris lobortis a metus a venenatis. Pellentesque sit amet leo at nibh volutpat tempor sit amet vel ipsum. Aliquam sed faucibus felis. Cras porta egestas erat, molestie euismod felis eleifend a. Pellentesque ac iaculis arcu. Pellentesque congue est diam, non suscipit nisi rhoncus vel. Curabitur fringilla sollicitudin accumsan. Maecenas tincidunt libero odio, in dignissim orci malesuada id. Suspendisse sollicitudin, ipsum faucibus vestibulum viverra, ante metus feugiat nunc, ut tincidunt diam purus nec nulla. Mauris justo orci, dictum sit amet quam ut, facilisis malesuada nisl. Nunc vitae malesuada tortor. Donec ac risus sodales, auctor lorem eu, laoreet augue.
+
+Phasellus in pulvinar risus. Nullam suscipit ullamcorper sem. Quisque vestibulum aliquet mauris, ut auctor arcu lobortis at. Fusce eu neque aliquam, blandit urna sed, aliquet orci. Integer ullamcorper aliquet risus. Nam semper vestibulum erat, in facilisis quam scelerisque vitae. Pellentesque at volutpat felis. Proin a ullamcorper quam. Etiam euismod sapien nec molestie feugiat. Nullam laoreet lacus sed leo ullamcorper, vel tempus metus tristique. Morbi tempus consectetur leo. Duis sed quam vehicula, egestas mi nec, tristique sapien. Maecenas finibus scelerisque tellus, et sodales leo sollicitudin lobortis. Proin eu tempor turpis.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas dui ut enim placerat interdum. Mauris faucibus est sit amet ultrices sollicitudin. Etiam laoreet, ipsum non vehicula imperdiet, justo purus aliquam metus, ac pharetra odio purus vitae orci. Nullam id sodales neque, nec lobortis lectus. Integer leo nibh, efficitur sed tincidunt vel, scelerisque non nisi. In viverra sapien tortor, bibendum hendrerit nibh faucibus vitae. Morbi pretium molestie eros, sed posuere felis. Vivamus rhoncus, orci at pharetra pretium, purus lorem interdum risus, in varius lacus ante consequat neque. Praesent mollis, dolor id tincidunt finibus, mauris risus pellentesque risus, vel porta urna justo in libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam ac sem nisl. Phasellus pretium risus leo, ac consequat dolor vestibulum ac. Nulla facilisi. Maecenas vitae leo sit amet turpis elementum ultrices at eu dui.
+
+Nunc bibendum erat sit amet ligula vestibulum elementum. Vivamus at lacinia est. Curabitur consequat enim a urna commodo, in commodo quam lacinia. Vivamus at hendrerit lorem. Suspendisse sed rhoncus lacus, viverra dictum magna. Nulla facilisi. Sed blandit sodales sollicitudin. Nunc finibus mollis aliquet. Nulla blandit turpis metus, nec tempor sem ornare non. In euismod dui at urna laoreet, pretium volutpat risus mattis.
+Generated 10 paragraphs, 890 words, 6032 bytes of Lorem Ipsum</p>
+     
+  
+
+    
+
   </body>
 </html>
